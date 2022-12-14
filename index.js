@@ -1,4 +1,3 @@
-
 /**
  * Recebe um array com os nomes de pessoas e retorna um array invertido
  *
@@ -12,8 +11,11 @@ function invert(people){
     // todos os nomes digitados, porém de maneira invertida (do último para o primeiro).
     // Uma dica, você pode utilizar a função prompt para permitir que o usuário digite os
     // nomes dos usuários.
-
-    return [];
+    let pessoasInvertidas = [];
+    for(let i = people.length - 1; i >= 0; i--) {
+        pessoasInvertidas.push(people[i]);
+    }
+    return pessoasInvertidas;
 }
 
 /**
@@ -28,8 +30,13 @@ function mean(grades){
     // 2) Faça um programa que leia o nome e as três notas de uma disciplina de um aluno e ao final escreva
     // o nome do aluno, sua média e se ele foi aprovado, sabendo-se que a média para aprovação é igual
     // ou superior a 7.
-
-    return 0;
+    let mean;
+    let sum = 0;
+    for (let i = 0; i <= grades.length - 1; i++) {
+        sum+= grades[i];
+    }
+    mean = sum / grades.length;
+    return mean;
 }
 
 /**
@@ -45,7 +52,12 @@ function isApproved(mean){
     // o nome do aluno, sua média e se ele foi aprovado, sabendo-se que a média para aprovação é igual
     // ou superior a 7.
 
-    return "";
+    if (mean >= 7) {
+        return "aprovado";        
+    } else {
+        return "reprovado";
+    }
+
 }
 
 /**
@@ -62,7 +74,45 @@ function wide(strDate){
     // “split” de uma string que quebra a string em pedaços dado um separador como argumento da função.
     // Nesse caso, o separador é a barra (/) da data.
 
-    return "";
+    if (strDate == "") {
+        return "";
+    } else if (strDate.includes("-")) {
+        return "";
+    }
+
+    let splittedDate = strDate.split("/");
+    let month = mountALiteralMonth(splittedDate[1]);
+
+    return splittedDate[0] + " de " + month + " de " + splittedDate[2];
+}
+
+function mountALiteralMonth(month) {
+    switch(month) {
+        case "01":
+            return month = "janeiro";
+        case "02":
+            return month = "fevereiro";
+        case "03":
+            return month = "março";
+        case "04":
+            return month = "abril";
+        case "05":
+            return month = "maio";
+        case "06":
+            return month = "junho";
+        case "07":
+            return month = "julho";
+        case "08":
+            return month = "agosto";
+        case "09":
+            return month = "setembro";
+        case "10":
+            return month = "outubro"
+        case "11":
+            return month = "novembro";
+        case "12":
+            return month = "dezembro";
+    }
 }
 
 // Trecho utilizado pelos testes
