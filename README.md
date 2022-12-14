@@ -3,6 +3,7 @@
 Lista de exercícios de Javascript
 ## Passos para a realização do exercício
 
+
   * Primeiro, faça um [*fork*](https://docs.github.com/pt/get-started/quickstart/fork-a-repo) do projeto para a sua conta no Github
   * Depois, realize um [clone](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository) para a sua máquina local
   * Logo, implemente as [issues](https://github.com/rpmhub/cpw2-js/issues) que foram estipuladas para esse projeto
